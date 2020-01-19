@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="cadastro de paciente.css" type="text/css"> 
+    <title>Cadastro de pacientes</title>
+</head>
+<body>
+    <form action="gravarPaciente.php" enctype="multipart/form-data" method="POST">
+        <h3>Cadastro de paciente</h3><br>
+        <div class="containerPai">
+            <div class="container1">
+                Nome:<br>
+                <input type="text" class="inputPadrao" name="nome" placeholder="Nome do paciente"><br>
+                E-mail:<br>
+                <input name="email" class="inputPadrao" type="email" placeholder="E-mail"><br>
+                Endereço:<br>
+                <input type="text" class="inputPadrao" name="endereco" placeholder="Endereço do paciente"><br>
+                Bairro:<br>
+                <input type="text" class="inputPadrao" name="bairro" placeholder="Bairro"><br>
+                Estado:<br>
+                <select name="estado" class="inputPadrao selectUF">
+                    <option value="">Selecione...</option>
+                    <option value="acre">Acre (AC)</option>
+                    <option value="alagoas">Alagoas (AL)</option>
+                    <option value="amapa">Amapá (AP)</option>
+                    <option value="amazonas">Amazonas (AM)</option>
+                    <option value="bahia">Bahia (BA)</option>
+                    <option value="ceara">Ceará (CE)</option>
+                    <option value="distrito">Distrito Federal (DF)</option>
+                    <option value="espirito">Espírito Santo (ES)</option>
+                    <option value="goias">Goiás (GO)</option>
+                    <option value="maranhao">Maranhão (MA)</option>
+                    <option value="matoGrosso">Mato Grosso (MT)</option>
+                    <option value="matoSul">Mato Grosso do Sul (MS)</option>
+                    <option value="minas">Minas Gerais (MG)</option>
+                    <option value="para">Pará (PA)</option>
+                    <option value="paraiba">Paraíba (PB)</option>
+                    <option value="parana">Paraná (PR)</option>
+                    <option value="pernambunco">Pernambuco (PE)</option>
+                    <option value="piaui">Piauí (PI)</option>
+                    <option value="rio">Rio de Janeiro (RJ)</option>
+                    <option value="rioGrandeNorte">Rio Grande do Norte (RN)</option>
+                    <option value="rioGrandeSul">Rio Grande do Sul (RS)</option>
+                    <option value="rondonia">Rondônia (RO)</option>
+                    <option value="roraima">Roraima (RR)</option>
+                    <option value="santaCatarina">Santa Catarina (SC)</option>
+                    <option value="saoPaulo">São Paulo (SP)</option>
+                    <option value="sergipe">Sergipe (SE)</option>
+                    <option value="tocantins">Tocantins (TO)</option>
+                </select><br>
+                Telefone:<br>
+                <input name="telefone" type="number" placeholder="numero do telefone"><br>
+            </div>
+            <div class="container2">
+                Celular:<br>
+                <input name="celular" type="number" placeholder="Numero celular"><br>
+                RG:<br>
+                <input name="rg" type="number" placeholder="RG"><br>
+                CPF:<br>
+                <input name="cpf" type="number" placeholder="cpf"><br>
+                Data de nascimento<br>
+                <input name="dataNascimento" type="date"><br>
+                Convênio:<br>
+                <input name="convenio" type="radio" name="covenio" value="S" checked="">Sim
+                <input type="radio" name="covenio" value="N">Nao<br>
+                Foto paciente:
+                <input type="file" value="foto"><br>
+            </div>
+        </div>
+        <div class="container3">
+            Observação:<br>
+            <textarea name="obs" cols="100" rows="10" value="obs"></textarea><br>
+            <input type="submit" value="Cadastrar" class="botoesBaixo btCadastro">
+            <input type="reset" class="botoesBaixo">
+        </div>
+    </form>
+    <a href="listagem.php" class="linkListagem">clique aqui para acessar a lista de Pacientes</a>
+</body>
+</html>

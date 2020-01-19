@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastro de fornecedores</title>
+    <style>
+        form{
+            padding: 20px;
+            width: 50%;
+            height: 100%;
+            margin: auto;
+            background: silver;
+        }
+        .fornecedor{
+            width: 80%
+        }
+        .primeiro_conteier{
+            display: flex;
+            background: silver;
+            height: 430px;
+        }
+        .primeiro_conteier1{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+            
+        }
+        .primeiro_conteier2{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+        }
+        .primeiro_conteier2_conteiner1{
+            display: flex;
+        }
+        .primeiro_conteier2_conteiner1_esquerdo{
+            display: flex;
+            flex-direction: column;
+            width: 50%
+        }
+        .primeiro_conteier2_conteiner1_direito{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .segundo_conteiner{
+            background: silver;
+            display: flex;
+        }
+        .segundo_conteiner1{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+        }
+        .segundo_conteiner2{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="gravarFornecedor.php" enctype="multipart/form-data" method="POST">
+        Fornecedor:
+        <input  class="fornecedor" type="text" name="fornecedor" placeholder="Nome do fornecedor">
+        <div class="primeiro_conteier">
+            <div class="primeiro_conteier1">
+                CNPJ:
+                <input type="text" name="cnpj">
+                Endereço:
+                <input type="text" name="endereco">
+                Cidade:
+                <input type="text" name="cidade">
+                Condicoes pagamento:
+                <input type="text" name="condicoes_pagamento">
+                Telefone 1:
+                <input type="number" name="telefone1">
+                Celular:
+                <input type="text" name="celular">
+                E-mail:
+                <input type="email" name="email">
+            </div>
+            <div class="primeiro_conteier2">
+                Inscrição estadual:
+                <input type="number" name="inscricao_estadual">
+                <div class="primeiro_conteier2_conteiner1">
+                    <div class="primeiro_conteier2_conteiner1_esquerdo">
+                        Nº:
+                        <input type="number" name="numero">
+                        Estado:
+                        <select name="estado">
+                            <option value="acre">Acre (AC)</option>
+                            <option value="alagoas">Alagoas (AL)</option>
+                            <option value="amapa">Amapá (AP)</option>
+                            <option value="amazonas">Amazonas (AM)</option>
+                            <option value="bahia">Bahia (BA)</option>
+                            <option value="ceara">Ceará (CE)</option>
+                            <option value="distrito">Distrito Federal (DF)</option>
+                            <option value="espirito">Espírito Santo (ES)</option>
+                            <option value="goias">Goiás (GO)</option>
+                            <option value="maranhao">Maranhão (MA)</option>
+                            <option value="matoGrosso">Mato Grosso (MT)</option>
+                            <option value="matoSul">Mato Grosso do Sul (MS)</option>
+                            <option value="minas">Minas Gerais (MG)</option>
+                            <option value="para">Pará (PA)</option>
+                            <option value="paraiba">Paraíba (PB)</option>
+                            <option value="parana">Paraná (PR)</option>
+                            <option value="pernambunco">Pernambuco (PE)</option>
+                            <option value="piaui">Piauí (PI)</option>
+                            <option value="rio">Rio de Janeiro (RJ)</option>
+                            <option value="rioGrandeNorte">Rio Grande do Norte (RN)</option>
+                            <option value="rioGrandeSul">Rio Grande do Sul (RS)</option>
+                            <option value="rondonia">Rondônia (RO)</option>
+                            <option value="roraima">Roraima (RR)</option>
+                            <option value="santaCatarina">Santa Catarina (SC)</option>
+                            <option value="saoPaulo">São Paulo (SP)</option>
+                            <option value="sergipe">Sergipe (SE)</option>
+                            <option value="tocantins">Tocantins (TO)</option>
+                        </select>
+                    </div>
+                    <div class="primeiro_conteier2_conteiner1_direito">
+                        Bairro:
+                        <input type="text" name="bairro">
+                        CEP:
+                        <input type="text" name="cep">
+                    </div>
+                </div>
+                Data:
+                <input type="date" name="data_cadastro">
+                Telefone 2:
+                <input type="number" name="telefone2">
+                Contato:
+                <input type="text" name="contato">
+                Contrato:
+                <input type="file" name="contrato">
+            </div>
+        </div>
+        <div class="segundo_conteiner">
+            <div class="segundo_conteiner1">
+                produto - 1 
+                <input type="text" name="produto1">
+                produto - 2 
+                <input type="text" name="produto2">
+                produto - 3 
+                <input type="text" name="produto3">
+                produto - 4 
+                <input type="text" name="produto4">
+            </div>
+            <div class="segundo_conteiner2">
+                produto - 5 
+                <input type="text" name="produto5">
+                produto - 6 
+                <input type="text" name="produto6">
+                produto - 7 
+                <input type="text" name="produto7">
+                produto - 8 
+                <input type="text" name="produto8">
+            </div>
+        </div>
+        Observação:<br>
+        <textarea name="obs" cols="100" rows="10" value="obs"></textarea><br>
+        <input type="submit" value="Cadastrar">
+        <input type="reset">
+    </form>
+    <a href="listagem.php">clique aqui para acessar a lista de fornecedores</a>
+</body>
+</html>

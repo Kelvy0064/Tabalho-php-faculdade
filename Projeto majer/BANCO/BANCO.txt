@@ -1,0 +1,83 @@
+CREATE DATABASE CLINICA_ODONTOLOGICA;
+
+USE CLINICA_ODONTOLOGICA;
+
+CREATE TABLE Paciente (
+	id		 INT AUTO_INCREMENT PRIMARY KEY	,
+	nomePaciente	 VARCHAR(80),
+	endereco       	 VARCHAR(80),
+	bairro 		 VARCHAR(20),
+	estado 		 VARCHAR(30),
+	telefone 	 INT(10),
+	celular 	 INT(11),
+	email  		 VARCHAR(80),
+	rg 		 INT(9),
+    	cpf 		 INT(11),
+    	dataNascimento	 DATE,
+    	convenio 	 BOOLEAN,
+    	fotoPaciente 	 longblob,		
+    	obs	 	 TEXT(100)				
+);
+
+CREATE TABLE Fornecedores (
+	fornecedor	 VARCHAR(80),
+	cnpj 		CHAR(18),
+	inscricaoEstadual  CHAR(15),
+	endereco 	VARCHAR(80),
+	numero 		INT(5),
+	bairro 		VARCHAR(20),	
+	cep 		INT(9),
+	estado 		VARCHAR(30),
+	telefone1 	CHAR(10),
+	telefone2 	CHAR(10),
+	celular 	CHAR(11),
+	email 		VARCHAR(80),
+	FormaPagamento 	VARCHAR(20),
+	data 		DATE,
+	contato 	VARCHAR(20),
+	produto1 	VARCHAR(20),
+	produto2 	VARCHAR(20),
+	produto3 	VARCHAR(20),
+	produto4 	VARCHAR(20),
+	produto5 	VARCHAR(20),
+	produto6 	VARCHAR(20),
+	produto7 	VARCHAR(20),
+	produto8 	VARCHAR(20),
+	observacao 	TEXT,
+	contrato 	longblob
+	
+);	
+
+create table cadFuncionarios (
+	id int auto_increment primary key,
+	nome varchar (80),
+	log char(7),
+	endereco varchar(80),
+	cidade varchar(50),
+	complemento varchar(40),
+	telefone char (10),
+	celular char (12),
+	email varchar(80),
+	sexo char(1),
+	numero int,
+	UF char(2),
+	estadoCivil char (1),
+	bairro varchar (50),
+	cep char (8),
+	nFihos int (99),
+	grauInstrucao varchar(20),
+	dataNascimento date,
+	foto varchar(100),
+	nacionalidade char(1),
+	nCarteiraTrabalho char (6),
+	nPIS char(11),
+	cargo char(1),
+	loja char(1),
+	sCarteiraTrabalho char(5),
+	cpf char (11),
+	rg varchar (9),
+	admissao date
+);
+
+
+

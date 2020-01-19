@@ -1,0 +1,220 @@
+<html>
+<head>
+    
+    <title>Cadastro de Funcionários</title>
+    
+	<style>
+        form{
+            padding: 20px;
+            width: 50%;
+            height: 100%;
+            margin: auto;
+            background: silver;
+        }
+        .nome{
+            width: 80%
+        }
+        .primeiro_conteier{
+            display: flex;
+            background: silver;
+            height: 430px;
+        }
+        .primeiro_conteier1{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+            
+        }
+        .primeiro_conteier2{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+        }
+        .primeiro_conteier2_conteiner1{
+            display: flex;
+        }
+        .primeiro_conteier2_conteiner1_esquerdo{
+            display: flex;
+            flex-direction: column;
+            width: 50%
+        }
+        .primeiro_conteier2_conteiner1_direito{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .segundo_conteiner{
+            background: silver;
+            display: flex;
+        }
+        .segundo_conteiner1{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+        }
+        .segundo_conteiner2{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px;
+        }
+		.envio{
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <form action="gravarFuncionarios.php" enctype="multipart/form-data" method="POST">
+        Nome:
+        <input  class="nome" type="text" name="nome" placeholder="Nome do Funcionário" maxlength="80">
+        <div class="primeiro_conteier">
+            <div class="primeiro_conteier1">
+                Logradouro:
+                <select name="log" maxlength="7">
+					<option value="rua">Rua</option>
+					<option value="avenida">Avenida</option>
+					<option value="chacara">Chácara</option>
+					<option value="fazenda">Fazenda</option>
+				</select>
+				
+                Endereço:
+                <input type="text" name="endereco" maxlength="80">
+                Cidade:
+                <input type="text" name="cidade" maxlength="50">
+                Complemento:
+                <input type="text" name="complemento" maxlength="40">
+                Telefone:
+                <input type="text" name="telefone" maxlength="10" placeholder="Insira o telefone com DDD">
+                Celular:
+                <input type="text" name="celular" maxlength="12" placeholder="Insira o Celular com DDD">
+                E-mail:
+                <input type="email" name="email" maxlength="80">
+				
+			<fieldset>
+			<legend>Sexo:</legend>				
+				
+				<input type="radio" name="sexo" value="M" checked>Masculino
+				<input type="radio" name="sexo" value="F" checked>Feminino
+			</fieldset>
+            </div>
+            <div class="primeiro_conteier2">
+                
+                
+					
+                <div class="primeiro_conteier2_conteiner1">
+                    <div class="primeiro_conteier2_conteiner1_esquerdo">
+                        Nº:
+                        <input type="number" name="numero" min="1" max="999999">
+                        UF:
+                        <select name="UF">
+                            <option value="AC">Acre (AC)</option>
+                            <option value="AL">Alagoas (AL)</option>
+                            <option value="AP">Amapá (AP)</option>
+                            <option value="AM">Amazonas (AM)</option>
+                            <option value="BA">Bahia (BA)</option>
+                            <option value="CE">Ceará (CE)</option>
+                            <option value="DF">Distrito Federal (DF)</option>
+                            <option value="ES">Espirito Santo (ES)</option>
+                            <option value="GO">Goiás (GO)</option>
+                            <option value="MA">Maranhão (MA)</option>
+                            <option value="MT">Mato Grosso (MT)</option>
+                            <option value="MS">Mato Grosso do Sul (MS)</option>
+                            <option value="MG">Minas Gerais (MG)</option>
+                            <option value="PA">Pará (PA)</option>
+                            <option value="PB">Paraíba (PB)</option>
+                            <option value="PR">Paraná (PR)</option>
+                            <option value="PE">Pernambuco (PE)</option>
+                            <option value="PI">Piauí­ (PI)</option>
+                            <option value="RJ">Rio de Janeiro (RJ)</option>
+                            <option value="RN">Rio Grande do Norte (RN)</option>
+                            <option value="RS">Rio Grande do Sul (RS)</option>
+                            <option value="RO">Rondônia (RO)</option>
+                            <option value="RR">Roraima (RR)</option>
+                            <option value="SC">Santa Catarina (SC)</option>
+                            <option value="SP">São Paulo (SP)</option>
+                            <option value="SE">Sergipe (SE)</option>
+                            <option value="TO">Tocantins (TO)</option>
+                        </select>
+				Estado Civíl:
+				<select name="estadoCivil">
+					<option value="s">Solteiro(a)</option>
+					<option value="c">Casado(a)</option>
+					<option value="v(a)">Viúvo(a)</option>
+					<option value="d">Divorciado(a)</option>
+				</select>
+                    </div>
+                    <div class="primeiro_conteier2_conteiner1_direito">
+                        Bairro:
+                        <input type="text" name="bairro" maxlength="50">
+                        CEP:
+                        <input type="text" name="cep" maxlength="8">
+				Número de Filhos:
+				<input type="number" name="nFihos" maxlength="2" max="99" min="0">
+                    </div>
+                </div>
+				Grau de Instrução:
+				<select name="grauInstrucao">
+					<option value="analfabeto">Analfabeto</option>
+					<option value="ensinoFundamentalInc">Ensino fundamental incompleto</option>
+					<option value="ensinoFundamentalCom">Ensino fundamental completo</option>
+					<option value="ensinoMedioInc">Ensino médio incompleto</option>
+					<option value="ensinoMedioCom">Ensino médio completo</option>
+					<option value="superior">Superior completo</option>
+					<option value="posGraduacao">Pós-Graduação</option>
+					<option value="mestrado">Mestrado</option>
+					<option value="doutorado">Doutorado</option>
+					<option value="posDoutorado">Pós-Doutorado</option>
+				</select>
+                Data de Nascimento:
+                <input type="date" name="dataNascimento"> 
+                Foto:
+                <input type="file" name="foto">
+			<fieldset>
+				<legend>Nacionalidade:</legend>				
+				<input type="radio" name="nacionalidade" value="B" checked>Brasileiro(a)
+				<input type="radio" name="nacionalidade" value="E" checked>Estrangeiro(a)
+			</fieldset>
+				
+            </div>
+        </div>
+        <div class="segundo_conteiner">
+            <div class="segundo_conteiner1">
+                Número Carteira de Trabalho:
+				<input type="text" name="nCarteiraTrabalho" maxlength="6">
+				Número PIS:
+				<input type="text" name="nPIS" maxlength="11">
+				Cargo:	<select name="cargo">
+						<option value="">Escolha</option>
+						<option value="A">Opção A</option>
+						<option value="B">Opção B</option>
+						<option value="C">Opção C</option>
+					</select>
+					
+				Loja:<select name="loja">
+						<option value="">Escolha</option>
+						<option value="A">Opção A</option>
+						<option value="B">Opção B</option>
+						<option value="C">Opção C</option>
+					</select>
+				
+            </div>
+            <div class="segundo_conteiner2">
+                Série:
+                <input type="text" name="sCarteiraTrabalho" maxlength="5">
+                CPF:
+                <input type="text" name="cpf" maxlength="11">
+                RG:
+                <input type="text" name="rg" maxlength="9">
+                Admissão: <input type="date" name="admissao">
+            </div>
+        </div>
+		<div class="envio">
+        <input type="submit" value="Cadastrar">
+		<input type="reset" value="Limpar Dados">
+		</div>
+    </form>
+</body>
+</html>
